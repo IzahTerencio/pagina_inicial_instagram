@@ -1,0 +1,166 @@
+/**"RESETANDO" AS PRODPRIEDADES DOS COMPONENTES DA PÁGINA**/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(243, 243, 243);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.instagram_wrapper{
+    display: flex; /** Quando é setado em um conteiner, seus itens ficam em linha e ocupam todo o espaço até a borda **/
+    align-items: center; /** Alinhamento vertical dos itens do bloco **/
+    justify-content: start; /** O conteúdo é justificado da esquerda para a direita **/
+    width: 60%;
+    height: 100vh; /** 1vh é igual a 1/100 da altura da viewport **/
+}
+
+.img_phone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.img_phone img{
+    height: 32rem;
+    width: 50rem;
+}
+
+.ig_login{
+    display: flex;
+    align-items: center; /* horizontal */
+    justify-content: space-around; /* vertical */
+    flex-direction: column;
+    width: 50%;
+    min-height: 34rem;
+}
+
+.group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 1.9rem 0;
+    border: 1px solid lightgrey;
+    box-shadow: 1px 1px gray;
+}
+
+/* SELETOR DE CSS QUE PEGA OS FILHOS DE DETERMINADO ELEMENTO */
+.group:nth-child(1){
+    min-height: 19rem;
+}
+
+.instagram_logo{
+    height: 5rem;
+}
+
+.profile_pic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden; /* Tudo que ultrapassar os limites da div será escondido */
+}
+
+.profile_pic img{
+    height: 9rem;
+}
+
+.instagram_login{
+    background-color: #0095f6;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 4px;
+}
+
+.instagram_logout{
+    color: #0095f6;
+    margin-top: 1rem;
+}
+
+.not_account{
+    color: rgb(160, 160, 160);
+}
+
+.blue_link{
+    color: #0095f6;
+}
+
+.get_the_app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;
+}
+
+.download{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly; /* Mesmo espaço no meio e nas laterais */
+    align-items: center;
+    padding: 1rem;
+}
+
+.app_download{
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+}
+
+.app_download:nth-child(1){
+    background-image: url(img/app_store_button.png);
+}
+
+.app_download:nth-child(2){
+    background-image: url(img/play_store_button.png);
+}
+
+/* TRABALHANDO RESPONSIVIDADE */
+@media(max-width: 1024px){
+
+    .instagram_wrapper{
+        width: 90%;
+    }
+
+}
+
+@media(max-width: 650px){ /* Celular */
+
+    body{
+        background-color: #ffffff;
+    }
+
+    .instagram_wrapper{
+        width: 90%;
+    }
+
+    .img_phone{
+        display: none;
+    }
+
+    .instagram_login{
+        width: 100%;
+    }
+
+    .group{
+        border: 1px solid transparent;
+    }
+
+}
